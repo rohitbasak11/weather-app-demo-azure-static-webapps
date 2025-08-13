@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Rohit's Weather App</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rohit's Weather App - New Color</h1>
-    <label>Enter your City: </label>
-    <input type="text" id="input" placeholder="Queenstown"/>
-    <button onclick="handleClick()">Search!!</button>
-    <div id="display">
-        
+    <h1>Rohit's Weather App</h1>
+    <div class="search-container">
+        <label for="input">Enter your City: </label>
+        <input type="text" id="input" placeholder="Queenstown" autocomplete="off" />
+        <button onclick="handleClick()">Search!!</button>
     </div>
+    <div id="display"></div>
     <p id="condition"></p>
     <span id="icon"></span>
-    
+    <p id="time"></p>
 </body>
 </html>
