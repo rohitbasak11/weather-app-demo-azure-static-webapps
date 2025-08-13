@@ -14,21 +14,6 @@ function updateTime() {
 
 updateTime();
 
-cityInput.addEventListener("input", function() {
-    const query = cityInput.value;
-    if (query.length > 2) {
-        fetch(`https://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${query}`)
-            .then(res => res.json())
-            .then(data => {
-                if (data.length > 0) {
-                    // Simple autocomplete suggestion (you can enhance this with a dropdown)
-                    cityInput.value = data[0].name; // Suggests the first match
-                }
-            })
-            .catch(err => console.log(err));
-    }
-});
-
 cityInput.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         handleClick();
